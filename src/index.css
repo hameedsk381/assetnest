@@ -1,21 +1,21 @@
-@import url('https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;1,500;1,600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,500;0,600;1,500;1,600&display=swap');
 
 :root {
-  --ink: #18231f;
-  --ink-soft: #41504a;
-  --paper: #f3f2ed;
-  --paper-deep: #e9e9e1;
-  --white: #fffef9;
-  --lime: #d9ff5b;
-  --line: rgba(24, 35, 31, 0.16);
+  --ink: #030814;
+  --ink-soft: #a3aab8;
+  --paper: #030814;
+  --paper-deep: #071024;
+  --white: #f0f4f8;
+  --lime: #dcb974;
+  --line: rgba(220, 185, 116, 0.28);
   --display: 'Playfair Display', Georgia, serif;
-  --sans: 'DM Sans', Arial, sans-serif;
-  --mono: 'DM Mono', monospace;
+  --sans: 'Inter', Arial, sans-serif;
+  --mono: 'Inter', Arial, sans-serif;
 }
 
 * { box-sizing: border-box; margin: 0; padding: 0; }
 html { scroll-behavior: smooth; }
-body { background: var(--paper); color: var(--ink); font-family: var(--sans); min-width: 320px; }
+body { background: var(--paper); background-image: radial-gradient(rgba(220, 185, 116, 0.07) 1px, transparent 1px), radial-gradient(circle at 20% 20%, rgba(20, 45, 95, 0.42), transparent 45%), linear-gradient(125deg, #030814 0%, #08142b 52%, #030814 100%); background-size: 30px 30px, 100% 100%, 100% 100%; background-attachment: fixed; color: var(--white); font-family: var(--sans); min-width: 320px; }
 a { color: inherit; text-decoration: none; }
 img { display: block; max-width: 100%; }
 button, a { -webkit-tap-highlight-color: transparent; }
@@ -25,9 +25,9 @@ button, a { -webkit-tap-highlight-color: transparent; }
 
 .site-header { align-items: center; display: flex; gap: 48px; height: 92px; justify-content: space-between; margin: 0 auto; width: min(1240px, calc(100% - 96px)); }
 .brand { align-items: center; display: inline-flex; gap: 11px; min-width: 184px; }
-.brand-mark { align-items: center; background: var(--ink); border-radius: 50%; color: var(--lime); display: inline-flex; font-family: var(--display); font-size: 20px; height: 35px; justify-content: center; width: 35px; }
-.brand strong { display: block; font-size: 17px; font-weight: 700; letter-spacing: -0.04em; line-height: 1; }
-.brand small { color: var(--ink-soft); display: block; font-family: var(--mono); font-size: 8px; letter-spacing: .08em; margin-top: 5px; }
+.brand-mark { display: none; }
+.brand strong { color: var(--lime); display: block; font-size: 22px; font-weight: 600; letter-spacing: .08em; line-height: 1; }
+.brand small { color: var(--lime); display: block; font-family: var(--mono); font-size: 8px; letter-spacing: .28em; margin-top: 6px; text-align: center; }
 .desktop-nav { display: flex; gap: 32px; margin-left: auto; }
 .desktop-nav a, .header-cta, .text-link { font-family: var(--mono); font-size: 11px; letter-spacing: .02em; text-transform: uppercase; }
 .desktop-nav a { color: var(--ink-soft); transition: color .2s ease; }
@@ -102,3 +102,30 @@ h1 em, h2 em { font-style: italic; font-weight: 500; }
 @media (max-width: 560px) {
   .section-wrap, .site-header { width: calc(100% - 36px); }.site-header { height: 78px; }.header-cta { font-size: 0; min-width: 39px; padding: 11px; }.header-cta span { font-size: 19px; }.hero { padding-top: 45px; }.hero h1 { font-size: 54px; }.hero-lede { font-size: 14px; }.hero-actions { align-items: flex-start; flex-direction: column; gap: 21px; }.hero-proof { margin-top: 55px; }.hero-visual { min-height: 420px; }.market-card { bottom: -56px; right: -4px; width: 190px; }.hero-caption { bottom: 16px; left: 16px; max-width: 175px; }.signal-bar { gap: 17px; grid-template-columns: 1fr 1fr; padding: 24px 18px; }.signal-bar div { justify-content: flex-start; padding: 7px 0; }.signal-bar div:nth-child(2) { border-right: 0; }.inventory { padding: 110px 0; }.section-heading { align-items: start; flex-direction: column; gap: 28px; }.property-grid { grid-template-columns: 1fr; }.property-card:last-child { grid-column: auto; }.property-image-wrap { height: 360px; }.advantage, .corridors, .founder { padding-bottom: 110px; padding-top: 110px; }.advantage-image img { height: 420px; }.nri-inner { padding-bottom: 90px; padding-top: 90px; }.nri-steps { gap: 7px; }.nri-steps span { font-size: 8px; }.founder { display: block; }.founder-mark { font-size: 90px; margin-bottom: 30px; }.founder-quote blockquote { font-size: 36px; }.contact-card { margin-bottom: 80px; padding: 38px 26px 42px; }.contact-card .button { margin: 0 0 18px; }.contact-email { display: block; }.site-footer { padding-left: 18px; padding-right: 18px; }.footer-top { display: block; padding-bottom: 35px; }.footer-top > p { margin: 28px 0; }.footer-arrow { display: inline-block; }.footer-grid { gap: 35px; grid-template-columns: 1fr 1fr; padding: 38px 0 50px; }.footer-grid > div:last-child { grid-column: span 2; }.footer-bottom { display: block; line-height: 1.8; }.footer-bottom span { display: block; margin-top: 8px; }
 }
+
+/* Original AssetNest navy and gold identity, retained within the modern layout. */
+.site-header { border-bottom: 1px solid rgba(220, 185, 116, 0.22); }
+.legacy-brand { min-width: 210px; text-align: center; }
+.legacy-brand strong { font-size: 23px; }
+.legacy-brand small { color: var(--lime); }
+.hero-copy h1, .section-heading h2, .advantage h2, .corridors h2, .founder h2, .contact-card h2 { color: var(--white); }
+.hero-lede, .heading-side p, .corridor-intro > p:last-of-type, .large-copy, .nri-content > p, .contact-card > div:last-child > p { color: var(--ink-soft); }
+.header-cta, .button-dark { background: var(--lime); color: var(--ink); }
+.header-cta span { color: var(--ink); }
+.hero-caption { background: rgba(7, 16, 36, .92); color: var(--white); }
+.hero-caption span { color: var(--ink-soft); }
+.hero-stamp, .image-note, .property-tag { background: var(--lime); color: var(--ink); }
+.market-card, .signal-bar, .nri-band, .site-footer { background: #071024; }
+.signal-bar { border-bottom: 1px solid rgba(220, 185, 116, .2); border-top: 1px solid rgba(220, 185, 116, .2); }
+.signal-bar span, .property-info h3, .benefit-list strong { color: var(--white); }
+.property-info p, .property-info strong, .founder-quote > p:not(.eyebrow), .footer-top > p, .footer-grid a, .footer-grid span:not(.footer-label) { color: var(--ink-soft); }
+.property-info > strong { color: var(--lime); }
+.property-arrow, .button-lime { background: var(--lime); color: var(--ink); }
+.text-link, .light-link { border-color: var(--lime); color: var(--lime); }
+.button-outline { border-color: var(--lime); color: var(--lime); }
+.button-outline:hover { background: var(--lime); color: var(--ink); }
+.contact-card { background: var(--lime); color: var(--ink); }
+.contact-card h2, .contact-card .eyebrow { color: var(--ink); }
+.contact-card .button-dark { background: var(--ink); color: var(--white); }
+.contact-email { color: var(--ink); }
+.footer-brand strong, .footer-brand small { color: var(--lime); }
