@@ -11,7 +11,7 @@ const HeroBadge = () => {
             </div>
             <h2 className="logo-main" style={{ marginBottom: 0 }}><span className="cinzel" style={{ fontSize: '2rem' }}>AssetNest</span></h2>
             <div style={{ color: 'var(--gold-color)', fontSize: '0.7rem', letterSpacing: '3px', fontWeight: 600, textTransform: 'uppercase' }} className="cinzel">— Realtors —</div>
-            <div className="logo-badge-subtitle" style={{ fontFamily: "'Playfair Display', serif" }}>Invest in Your Dreams</div>
+            <div className="logo-badge-subtitle" style={{ fontFamily: "'Playfair Display', serif" }}>Your Gateway to Hyderabad's Ultra-Premium Real Estate</div>
         </div>
     );
 };
