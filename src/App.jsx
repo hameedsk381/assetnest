@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import PropertyCard from './components/PropertyCard';
@@ -6,6 +6,13 @@ import PropertyCard from './components/PropertyCard';
 const Arrow = () => <span className="arrow" aria-hidden="true">↗</span>;
 
 function App() {
+  const [searchMode, setSearchMode] = useState('Buy');
+
+  const handleSearch = (event) => {
+    event.preventDefault();
+    document.getElementById('properties').scrollIntoView({ behavior: 'smooth' });
+  };
+
   return (
     <div className="site-shell" id="home">
       <Header />
@@ -37,6 +44,19 @@ function App() {
               <div className="line-chart"><i /><i /><i /><i /><i /><i /><i /></div>
             </div>
           </div>
+        </section>
+
+        <section className="property-search section-wrap" aria-label="Property search">
+          <div className="search-tabs" role="tablist" aria-label="Search purpose">
+            {['Buy', 'Rent', 'Invest'].map((mode) => <button key={mode} className={searchMode === mode ? 'active' : ''} onClick={() => setSearchMode(mode)} role="tab" aria-selected={searchMode === mode}>{mode}</button>)}
+          </div>
+          <form className="search-fields" onSubmit={handleSearch}>
+            <label><span>Location</span><select defaultValue=""><option value="" disabled>Select a corridor</option><option>Kokapet</option><option>Gachibowli</option><option>Financial District</option><option>Rajendra Nagar</option></select></label>
+            <label><span>Property type</span><select defaultValue=""><option value="" disabled>Choose a typology</option><option>3 BHK apartment</option><option>4 BHK apartment</option><option>Luxury villa</option><option>Villa plot</option></select></label>
+            <label><span>Budget</span><select defaultValue=""><option value="" disabled>Select budget</option><option>Under ₹1 Cr</option><option>₹1 Cr - ₹2 Cr</option><option>₹2 Cr - ₹5 Cr</option><option>₹5 Cr +</option></select></label>
+            <button className="search-submit" type="submit">Search <Arrow /></button>
+          </form>
+          <div className="search-foot"><span>Looking for something specific?</span><a href="tel:+919391484751">Speak to a property advisor <Arrow /></a></div>
         </section>
 
         <section className="signal-bar">
